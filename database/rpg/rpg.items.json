@@ -1,0 +1,88 @@
+{
+  "ore": {
+    "coal": { "name": "Coal Ore", "type": "ore", "price_buy": 50000, "price_sell": 25000 },
+    "iron": { "name": "Iron Ore", "type": "ore", "price_buy": 62500, "price_sell": 31250 },
+    "copper": { "name": "Copper Ore", "type": "ore", "price_buy": 78125, "price_sell": 39063 },
+    "silver": { "name": "Silver Ore", "type": "ore", "price_buy": 97656, "price_sell": 48828 },
+    "gold": { "name": "Gold Ore", "type": "ore", "price_buy": 122070, "price_sell": 61035 },
+    "emerald": { "name": "Emerald Ore", "type": "ore", "price_buy": 152588, "price_sell": 76294 },
+    "diamond": { "name": "Diamond Ore", "type": "ore", "price_buy": 190735, "price_sell": 95368 }
+  },
+  "box": {
+    "common": { "name": "Common Box", "type": "box", "price_buy": 25000, "price_sell": 12500 },
+    "uncommon": { "name": "Uncommon Box", "type": "box", "price_buy": 75000, "price_sell": 37500 },
+    "rare": { "name": "Rare Box", "type": "box", "price_buy": 225000, "price_sell": 112500 },
+    "epic": { "name": "Epic Box", "type": "box", "price_b buy": 675000, "price_sell": 337500 },
+    "legendary": { "name": "Legendary Box", "type": "box", "price_buy": 2025000, "price_sell": 1012500 },
+    "mythic": { "name": "Mythic Box", "type": "box", "price_buy": 6075000, "price_sell": 3037500 },
+    "divine": { "name": "Divine Box", "type": "box", "price_buy": 18225000, "price_sell": 9112500 },
+    "prismatic": { "name": "Prismatic Box", "type": "box", "price_buy": 54675000, "price_sell": 27337500 },
+    "secret": { "name": "Secret Box", "type": "box", "price_buy": 164025000, "price_sell": 82012500 }
+  },
+  "food": {
+    "bread": { "name": "Bread", "type": "food", "price_buy": 10000, "price_sell": 5000, "hunger": 12 },
+    "meat": { "name": "Meat", "type": "food", "price_buy": 10000, "price_sell": 5000, "hunger": 12 },
+    "fish": { "name": "Fish", "type": "food", "price_buy": 10000, "price_sell": 5000, "hunger": 12 },
+    "apple": { "name": "Apple", "type": "food", "price_buy": 10000, "price_sell": 5000, "hunger": 12 },
+    "cheese": { "name": "Cheese", "type": "food", "price_buy": 10000, "price_sell": 5000, "hunger": 12 }
+  },
+  "drink": {
+    "water": { "name": "Water", "type": "drink", "price_buy": 10000, "price_sell": 5000, "energy": 5 },
+    "milk": { "name": "Milk", "type": "drink", "price_buy": 17000, "price_sell": 9000, "energy": 12 },
+    "tea": { "name": "Tea", "type": "drink", "price_buy": 13000, "price_sell": 7000, "energy": 8 },
+    "juice": { "name": "Juice", "type": "drink", "price_buy": 20000, "price_sell": 10000, "energy": 15 }
+  },
+  "weapon": {
+    "wooden_sword": { "name": "Wooden Sword", "type": "weapon", "price_buy": 25000, "price_sell": 12500, "damage": 10 },
+    "iron_sword": { "name": "Iron Sword", "type": "weapon", "price_buy": 75000, "price_sell": 37500, "damage": 25 },
+    "steel_sword": { "name": "Steel Sword", "type": "weapon", "price_buy": 150000, "price_sell": 75000, "damage": 40 },
+    "silver_sword": { "name": "Silver Sword", "type": "weapon", "price_buy": 300000, "price_sell": 150000, "damage": 60 },
+    "dragonbone_sword": { "name": "Dragonbone Sword", "type": "weapon", "price_buy": 750000, "price_sell": 375000, "damage": 90 },
+    "legendary_blade": { "name": "Legendary Blade", "type": "weapon", "price_buy": 1500000, "price_sell": 750000, "damage": 150 }
+  },
+  "armor": {
+    "leather_armor": { "name": "Leather Armor", "type": "armor", "price_buy": 30000, "price_sell": 15000, "defense": 15 },
+    "chainmail_armor": { "name": "Chainmail Armor", "type": "armor", "price_buy": 75000, "price_sell": 37500, "defense": 30 },
+    "iron_armor": { "name": "Iron Armor", "type": "armor", "price_buy": 150000, "price_sell": 75000, "defense": 45 },
+    "steel_armor": { "name": "Steel Armor", "type": "armor", "price_buy": 300000, "price_sell": 150000, "defense": 60 },
+    "dragon_scale_armor": { "name": "Dragon Scale Armor", "type": "armor", "price_buy": 750000, "price_sell": 375000, "defense": 90 },
+    "divine_armor": { "name": "Divine Armor", "type": "armor", "price_buy": 1500000, "price_sell": 750000, "defense": 150 }
+  },
+  "potion": {
+    "health_potion": { "name": "Health Potion", "type": "potion", "price_buy": 15000, "price_sell": 7500, "restore": 50 },
+    "mana_potion": { "name": "Mana Potion", "type": "potion", "price_buy": 15000, "price_sell": 7500, "restore": 50 },
+    "stamina_potion": { "name": "Stamina Potion", "type": "potion", "price_buy": 12000, "price_sell": 6000, "restore": 40 },
+    "greater_health_potion": { "name": "Greater Health Potion", "type": "potion", "price_buy": 30000, "price_sell": 15000, "restore": 100 },
+    "elixir_of_life": { "name": "Elixir of Life", "type": "potion", "price_buy": 100000, "price_sell": 50000, "restore": 200 }
+  },
+  "spellbook": {
+    "fireball_scroll": { "name": "Fireball Scroll", "type": "spellbook", "price_buy": 50000, "price_sell": 25000, "damage": 40 },
+    "ice_shard_scroll": { "name": "Ice Shard Scroll", "type": "spellbook", "price_buy": 50000, "price_sell": 25000, "damage": 35 },
+    "lightning_bolt_scroll": { "name": "Lightning Bolt Scroll", "type": "spellbook", "price_buy": 60000, "price_sell": 30000, "damage": 45 },
+    "healing_scroll": { "name": "Healing Scroll", "type": "spellbook", "price_buy": 75000, "price_sell": 37500, "heal": 60 },
+    "teleport_scroll": { "name": "Teleport Scroll", "type": "spellbook", "price_buy": 100000, "price_sell": 50000 }
+  },
+  "tool": {
+    "basic_pickaxe": { "name": "Basic Pickaxe", "type": "tool", "price_buy": 20000, "price_sell": 10000, "efficiency": 1.0 },
+    "iron_pickaxe": { "name": "Iron Pickaxe", "type": "tool", "price_buy": 50000, "price_sell": 25000, "efficiency": 1.5 },
+    "steel_pickaxe": { "name": "Steel Pickaxe", "type": "tool", "price_buy": 100000, "price_sell": 50000, "efficiency": 2.0 },
+    "diamond_pickaxe": { "name": "Diamond Pickaxe", "type": "tool", "price_buy": 250000, "price_sell": 125000, "efficiency": 3.0 },
+    "magical_pickaxe": { "name": "Magical Pickaxe", "type": "tool", "price_buy": 500000, "price_sell": 250000, "efficiency": 5.0 }
+  },
+  "material": {
+    "wood": { "name": "Wood", "type": "material", "price_buy": 5000, "price_sell": 2500 },
+    "stone": { "name": "Stone", "type": "material", "price_buy": 7500, "price_sell": 3750 },
+    "leather": { "name": "Leather", "type": "material", "price_buy": 10000, "price_sell": 5000 },
+    "cloth": { "name": "Cloth", "type": "material", "price_buy": 8000, "price_sell": 4000 },
+    "iron_bar": { "name": "Iron Bar", "type": "material", "price_buy": 35000, "price_sell": 17500 },
+    "steel_bar": { "name": "Steel Bar", "type": "material", "price_buy": 70000, "price_sell": 35000 },
+    "magic_dust": { "name": "Magic Dust", "type": "material", "price_buy": 25000, "price_sell": 12500 }
+  },
+  "accessory": {
+    "copper_ring": { "name": "Copper Ring", "type": "accessory", "price_buy": 25000, "price_sell": 12500, "luck": 5 },
+    "silver_ring": { "name": "Silver Ring", "type": "accessory", "price_buy": 50000, "price_sell": 25000, "luck": 10 },
+    "gold_ring": { "name": "Gold Ring", "type": "accessory", "price_buy": 100000, "price_sell": 50000, "luck": 15 },
+    "amulet_of_protection": { "name": "Amulet of Protection", "type": "accessory", "price_buy": 150000, "price_sell": 75000, "defense": 20 },
+    "lucky_charm": { "name": "Lucky Charm", "type": "accessory", "price_buy": 200000, "price_sell": 100000, "luck": 25 }
+  }
+}
