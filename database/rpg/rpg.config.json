@@ -1,0 +1,158 @@
+{
+  "races": {
+    "human": {
+      "name": "Human",
+      "description": "Balanced race with attack and speed bonuses",
+      "versions": {
+        "v1": {
+          "level_required": 1,
+          "attack_bonus": 5,
+          "speed_bonus": 5,
+          "health_bonus": 0,
+          "defense_bonus": 0,
+          "passive": "Fast Learner: +10% EXP gain",
+          "special_ability": "Adaptive Combat"
+        },
+        "v2": {
+          "level_required": 15,
+          "attack_bonus": 10,
+          "speed_bonus": 10,
+          "health_bonus": 50,
+          "defense_bonus": 5,
+          "passive": "Quick Recovery: +15% Health Regen",
+          "special_ability": "Critical Strike"
+        },
+        "v3": {
+          "level_required": 35,
+          "attack_bonus": 15,
+          "speed_bonus": 15,
+          "health_bonus": 100,
+          "defense_bonus": 10,
+          "passive": "Battle Hardened: +20% Damage Reduction when low HP",
+          "special_ability": "Ultimate Fury"
+        }
+      }
+    },
+    "angel": {
+      "name": "Angel",
+      "description": "Divine being with healing and regeneration abilities",
+      "versions": {
+        "v1": {
+          "level_required": 1,
+          "attack_bonus": 2,
+          "speed_bonus": 8,
+          "health_bonus": 20,
+          "defense_bonus": 8,
+          "passive": "Divine Regeneration: +25% Health Regen",
+          "special_ability": "Healing Light"
+        },
+        "v2": {
+          "level_required": 20,
+          "attack_bonus": 5,
+          "speed_bonus": 12,
+          "health_bonus": 50,
+          "defense_bonus": 12,
+          "passive": "Celestial Protection: +15% Damage Reduction",
+          "special_ability": "Revival Grace"
+        },
+        "v3": {
+          "level_required": 40,
+          "attack_bonus": 8,
+          "speed_bonus": 15,
+          "health_bonus": 100,
+          "defense_bonus": 15,
+          "passive": "Archangel's Blessing: Auto-revive once per battle",
+          "special_ability": "Divine Judgment"
+        }
+      }
+    },
+    "shark": {
+      "name": "Shark",
+      "description": "Aquatic predator with high HP and damage reduction",
+      "versions": {
+        "v1": {
+          "level_required": 1,
+          "attack_bonus": 8,
+          "speed_bonus": 3,
+          "health_bonus": 50,
+          "defense_bonus": 12,
+          "passive": "Thick Skin: +20% Damage Reduction",
+          "special_ability": "Blood Frenzy"
+        },
+        "v2": {
+          "level_required": 25,
+          "attack_bonus": 12,
+          "speed_bonus": 5,
+          "health_bonus": 100,
+          "defense_bonus": 18,
+          "passive": "Aquatic Dominance: +30% HP in water zones",
+          "special_ability": "Ocean's Wrath"
+        },
+        "v3": {
+          "level_required": 45,
+          "attack_bonus": 15,
+          "speed_bonus": 8,
+          "health_bonus": 150,
+          "defense_bonus": 25,
+          "passive": "Alpha Predator: +25% Attack when HP above 70%",
+          "special_ability": "Tsunami Crash"
+        }
+      }
+    }
+  },
+  "config": {
+    "race_chances": {
+      "human": 62.5,
+      "angel": 18.75,
+      "shark": 18.75
+    },
+    "version_requirements": {
+      "v2": {
+        "level": 15,
+        "quest": "advanced_training"
+      },
+      "v3": {
+        "level": 35,
+        "boss": "ancient_guardian"
+      }
+    },
+    "game_settings": {
+      "exp_base": 100,
+      "exp_multiplier": 1.5,
+      "max_level": 100,
+      "base_health": 100,
+      "base_attack": 10,
+      "base_defense": 5,
+      "base_stamina": 100,
+      "base_hunger": 100,
+      "base_energy": 100
+    },
+    "cooldowns": {
+      "hunt": 30000,
+      "work": 45000,
+      "mine": 60000,
+      "fish": 40000,
+      "chop": 50000,
+      "craft": 30000,
+      "cook": 35000,
+      "duel": 60000,
+      "boss": 120000,
+      "dungeon": 90000,
+      "explore": 80000,
+      "train": 70000,
+      "quest": 60000,
+      "gamble": 30000,
+      "trade": 25000,
+      "heal": 20000,
+      "rest": 30000,
+      "pray": 40000,
+      "enchant": 50000,
+      "forge": 60000,
+      "alchemy": 45000,
+      "study": 55000,
+      "meditate": 35000,
+      "party": 40000,
+      "raid": 150000
+    }
+  }
+}

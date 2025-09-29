@@ -24,6 +24,9 @@ const pipeline = promisify(stream.pipeline);
 /** Pause async execution for ms milliseconds */
 export const sleep = (ms = 0) => new Promise((res) => setTimeout(res, ms));
 
+/** For Ram Usage Ping */
+export const fmt = (b) => `${(b / 1024 / 1024).toFixed(2)} MB`;
+
 /** Generate random hex id, length = bytes */
 export const randomId = (bytes = 8) => crypto.randomBytes(bytes).toString('hex');
 
@@ -377,6 +380,7 @@ export async function retry(fn, { attempts = 3, delay = 500 } = {}) {
 
 export const Utils = {
   sleep,
+  fmt,
   randomId,
   isUrl,
   extractUrls,

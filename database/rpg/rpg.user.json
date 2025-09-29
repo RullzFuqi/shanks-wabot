@@ -1,0 +1,137 @@
+{
+  "users": [
+    {
+      "id": "30357365764155@lid",
+      "name": "rullzfuqi",
+      "level": 1,
+      "exp": 22,
+      "money": 100088,
+      "race": "human",
+      "version": "v1",
+      "stats": {
+        "health": 100,
+        "attack": 15,
+        "defense": 5,
+        "speed": 5,
+        "stamina": 85,
+        "hunger": 95,
+        "energy": 100,
+        "max_health": 100,
+        "max_stamina": 100,
+        "max_hunger": 100,
+        "max_energy": 100
+      },
+      "inventory": {
+        "ore": {
+          "coal": 0,
+          "iron": 0,
+          "copper": 0,
+          "silver": 0,
+          "gold": 0,
+          "emerald": 0,
+          "diamond": 0
+        },
+        "box": {
+          "common": 0,
+          "uncommon": 0,
+          "rare": 0,
+          "epic": 0,
+          "legendary": 0,
+          "mythic": 0,
+          "divine": 0,
+          "prismatic": 0,
+          "secret": 0
+        },
+        "food": {
+          "bread": 0,
+          "meat": 0,
+          "fish": 0,
+          "apple": 0,
+          "cheese": 0
+        },
+        "drink": {
+          "water": 0,
+          "milk": 0,
+          "tea": 0,
+          "juice": 0
+        },
+        "weapon": {
+          "wooden_sword": 0,
+          "iron_sword": 0,
+          "steel_sword": 0,
+          "silver_sword": 0,
+          "dragonbone_sword": 0,
+          "legendary_blade": 0
+        },
+        "armor": {
+          "leather_armor": 0,
+          "chainmail_armor": 0,
+          "iron_armor": 0,
+          "steel_armor": 0,
+          "dragon_scale_armor": 0,
+          "divine_armor": 0
+        },
+        "potion": {
+          "health_potion": 0,
+          "mana_potion": 0,
+          "stamina_potion": 0,
+          "greater_health_potion": 0,
+          "elixir_of_life": 0
+        },
+        "spellbook": {
+          "fireball_scroll": 0,
+          "ice_shard_scroll": 0,
+          "lightning_bolt_scroll": 0,
+          "healing_scroll": 0,
+          "teleport_scroll": 0
+        },
+        "tool": {
+          "basic_pickaxe": 0,
+          "iron_pickaxe": 0,
+          "steel_pickaxe": 0,
+          "diamond_pickaxe": 0,
+          "magical_pickaxe": 0
+        },
+        "material": {
+          "wood": 0,
+          "stone": 0,
+          "leather": 1,
+          "cloth": 0,
+          "iron_bar": 0,
+          "steel_bar": 0,
+          "magic_dust": 0
+        },
+        "accessory": {
+          "copper_ring": 0,
+          "silver_ring": 0,
+          "gold_ring": 0,
+          "amulet_of_protection": 0,
+          "lucky_charm": 0
+        }
+      },
+      "equipment": {
+        "weapon": null,
+        "armor": null,
+        "accessory": null
+      },
+      "cooldowns": {
+        "hunt": 1759062431241
+      },
+      "skills": {
+        "mining": 1,
+        "fishing": 1,
+        "woodcutting": 1,
+        "crafting": 1,
+        "cooking": 1,
+        "combat": 1
+      },
+      "location": "village",
+      "lastAction": 1759062431220,
+      "createdAt": 1759062396142,
+      "quests": {
+        "active": [],
+        "completed": []
+      }
+    }
+  ]
+}

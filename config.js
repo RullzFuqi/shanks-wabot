@@ -2,58 +2,34 @@
 // © 2025 KyuuRzy. All Rights Reserved.
 // respect the work, don’t just copy-paste.
 
-const fs = require('fs')
+import fs from 'fs';
+import { fileURLToPath } from "url";
+import { dirname } from "path";
 
 const config = {
-    owner: "-",
-    botNumber: "-",
-    setPair: "12345678",
-    thumbUrl: "https://github.com/kiuur.png",
-    session: "sessions",
-    status: {
-        public: true,
-        terminal: true,
-        reactsw: false
-    },
+    owner: "6283892787563",
+    botNumber: "6283142864960",
     message: {
-        owner: "no, this is for owners only",
-        group: "this is for groups only",
-        admin: "this command is for admin only",
-        private: "this is specifically for private chat"
+        owner: "*Command For Owner Only",
+        group: "*Command For Gruop Only*",
+        admin: "*Command For Admin Only*",
+        private: "Command For Private Only*"
     },
-    settings: {
-        title: "kiruku simple wabot !",
-        packname: 'kiruku-wabot !',
-        description: "this script was created by KyuuRzy",
-        author: 'https://www.github.com/kiuur',
-        footer: "𝗍𝖾𝗅𝖾𝗀𝗋𝖺𝗆: @𝗌𝗍𝗏𝗇𝗇𝗏𝗌"
-    },
-    newsletter: {
-        name: "kiruku-wabot",
-        id: "120363297591152843@newsletter"
-    },
-    socialMedia: {
-        YouTube: "https://youtube.com/@kyuurzy",
-        GitHub: "https://github.com/kiuur",
-        Telegram: "https://t.me/stvnnvs",
-        ChannelWA: "https://whatsapp.com/channel/0029Vaeqym9IHphHwvXk9k1s"
-    },
-    api: {
-        baseurl: "https://zephrine.live/",
-        apikey: "kyuurzy" // berlaku sampai tanggal 1 oktober
-    },
-    sticker: {
-        packname: "kiruku-wabot !",
-        author: "kyuurzy"
+    mediaProperty: {
+      mp4ThumbnailOne: "https://raw.githubusercontent.com/RullzFuqi/db/main/shanks_img/VID-20250922-WA0032.mp4",
+      thumbnailOne: "https://raw.githubusercontent.com/RullzFuqi/db/main/shanks_img/17992020-a784-435f-8c77-b5f18676cd7b.jpeg",
+      thumbanilTwo: "https://raw.githubusercontent.com/RullzFuqi/db/main/shanks_img/(2)%20WRE%20%EC%99%93%EC%8A%A8%26Whatson%20on%20X_%20_%E2%80%A2%20One%20Piece%20-%20FILM%20RED%20Shanks%20Banner%20%E2%80%A2%20%23ONEPIECE%20%23Shanks%20%23FILMRED%20%23gear5%20%23Twitch%20https___t_co_0XfH3UVoDe_%20_%20X.jpeg",
+      thumbnailThree: "https://raw.githubusercontent.com/RullzFuqi/db/main/shanks_img/Shanks.jpeg"
     }
 }
 
-module.exports = config;
+export default config;
 
-let file = require.resolve(__filename)
-require('fs').watchFile(file, () => {
-  require('fs').unwatchFile(file)
-  console.log('\x1b[0;32m'+__filename+' \x1b[1;32mupdated!\x1b[0m')
-  delete require.cache[file]
-  require(file)
-})
+
+let __filename = fileURLToPath(import.meta.url);
+let __dirname = dirname(__filename);
+fs.watchFile(__filename, () => {
+  fs.unwatchFile(__filename);
+  console.log(`\x1b[0;32m${__filename} \x1b[1;32mupdated!\x1b[0m`);
+  import(`${__filename}?update=${Date.now()}`);
+});

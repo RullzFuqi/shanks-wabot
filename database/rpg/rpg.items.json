@@ -12,7 +12,7 @@
     "common": { "name": "Common Box", "type": "box", "price_buy": 25000, "price_sell": 12500 },
     "uncommon": { "name": "Uncommon Box", "type": "box", "price_buy": 75000, "price_sell": 37500 },
     "rare": { "name": "Rare Box", "type": "box", "price_buy": 225000, "price_sell": 112500 },
-    "epic": { "name": "Epic Box", "type": "box", "price_b buy": 675000, "price_sell": 337500 },
+    "epic": { "name": "Epic Box", "type": "box", "price_buy": 675000, "price_sell": 337500 },
     "legendary": { "name": "Legendary Box", "type": "box", "price_buy": 2025000, "price_sell": 1012500 },
     "mythic": { "name": "Mythic Box", "type": "box", "price_buy": 6075000, "price_sell": 3037500 },
     "divine": { "name": "Divine Box", "type": "box", "price_buy": 18225000, "price_sell": 9112500 },

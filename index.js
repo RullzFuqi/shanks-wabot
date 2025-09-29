@@ -5,7 +5,8 @@
  !========================!
   * Shanks - WhatsApp Bot
  */
-import makeWASocket, {
+import {
+  makeWASocket as makeWASockets,
   useMultiFileAuthState,
   DisconnectReason,
   fetchLatestBaileysVersion,
@@ -14,18 +15,18 @@ import makeWASocket, {
   downloadContentFromMessage
 } from "@whiskeysockets/baileys";
 import pino from "pino";
-import FileType from "file-type";
+import { fileTypeFromBuffer, fileTypeFromFile } from "file-type";
 import readline from "readline";
 import fs from "fs";
 import path from "path";
 import { Boom } from "@hapi/boom";
-import config from "./config.js";
 import { getBuffer } from "./engine/engine.utils.js";
 import { serializeMessage } from "./engine/engine.serialze.js";
 import { videoToWebp, writeExifImg, writeExifVid, addExif } from "./library/exif.js";
 import messageHandler from "./message.js";
 import { fileURLToPath } from "url";
 
+let statusTerm = true
 class ANSI {
   static reset = "\x1b[0m";
   static bold = (s) => `\x1b[1m${s}${ANSI.reset}`;
@@ -66,18 +67,18 @@ class WhatsAppClient {
   }
 
   async clientStart() {
-    const { state, saveCreds } = await useMultiFileAuthState(`./${config.session}`);
+    const { state, saveCreds } = await useMultiFileAuthState(`./session`);
     const { version, isLatest } = await fetchLatestBaileysVersion();
-    const sock = makeWASocket({
+    const sock = makeWASockets({
       logger: pino({ level: "silent" }),
-      printQRInTerminal: !config.status.terminal,
+      printQRInTerminal: !statusTerm,
       auth: state,
       browser: ["Ubuntu", "Chrome", "20.0.00"]
     });
 
-    if (config.status.terminal && !sock.authState?.creds?.registered) {
+    if (statusTerm && !sock.authState?.creds?.registered) {
       const phoneNumber = await this.question("enter your WhatsApp number, starting with 62:\nnumber WhatsApp: ");
-      const code = await sock.requestPairingCode(phoneNumber, config.setPair);
+      const code = await sock.requestPairingCode(phoneNumber, "SHANKSWB");
       console.log(ANSI.green("your pairing code: ") + ANSI.bold.green ? ANSI.bold(code) : code);
     }
 
@@ -91,7 +92,8 @@ class WhatsAppClient {
         mek.message = Object.keys(mek.message ?? {})[0] === "ephemeralMessage"
           ? mek.message.ephemeralMessage.message
           : mek.message;
-        if (config.status.reactsw && mek.key && mek.key.remoteJid === "status@broadcast") {
+          let statusRectSw = false
+        if (statusRectSw && mek.key && mek.key.remoteJid === "status@broadcast") {
           const emoji = ["😘", "😭", "😂", "😹", "😍", "😋", "🙏", "😜", "😢", "😠", "🤫", "😎"];
           const sigma = emoji[Math.floor(Math.random() * emoji.length)];
           await sock.readMessages([mek.key]);
@@ -99,7 +101,7 @@ class WhatsAppClient {
         }
         if (!sock.public && !mek.key.fromMe && chatUpdate.type === "notify") return;
         if (mek.key.id?.startsWith("SH3NN-") && mek.key.id.length === 12) return;
-        const m = await smsg(sock, mek, this.store);
+        const m = await serializeMessage(sock, mek, this.store);
         if (typeof messageHandler === "function") messageHandler(sock, m, chatUpdate, this.store);
         else if (messageHandler?.default) messageHandler.default(sock, m, chatUpdate, this.store);
       } catch (err) {
@@ -122,7 +124,7 @@ class WhatsAppClient {
       }
     });
 
-    sock.public = config.status.public;
+    sock.public = true;
 
     sock.ev.on("connection.update", (update) => {
       import("./library/connection/connection.js").then(({ konek }) => {
@@ -170,7 +172,7 @@ class WhatsAppClient {
       const stream = await downloadContentFromMessage(quoted, messageType);
       let buffer = Buffer.from([]);
       for await (const chunk of stream) buffer = Buffer.concat([buffer, chunk]);
-      const type = await FileType.fromBuffer(buffer);
+      const type = await fileTypeFromBuffer(buffer);
       const trueFileName = attachExtension ? `${filename}.${type.ext}` : filename;
       await fs.promises.writeFile(trueFileName, buffer);
       return trueFileName;
@@ -210,7 +212,7 @@ class WhatsAppClient {
         : Buffer.alloc(0);
 
       if (!Buffer.isBuffer(data)) throw new TypeError("Result is not a buffer");
-      const type = (await FileType.fromBuffer(data)) || { mime: "application/octet-stream", ext: ".bin" };
+      const type = (await fileTypeFromBuffer(data)) || { mime: "application/octet-stream", ext: ".bin" };
       if (data && returnAsFilename && !filename) {
         filename = path.join(process.cwd(), "./tmp/" + Date.now() + "." + type.ext);
         await fs.promises.writeFile(filename, data);
